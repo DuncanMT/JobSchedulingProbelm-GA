@@ -1,18 +1,16 @@
 package set10107;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.border.EmptyBorder;
 
 public class PopulationWindow extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -3311596218938494736L;
+	
 	private JPanel contentPane;
 	private JLabel lblNewPopulation;
 	private JLabel lblOrigonalPopulation;

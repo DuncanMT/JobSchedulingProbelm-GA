@@ -55,7 +55,6 @@ public class MainWindow extends JFrame implements ActionListener, PropertyChange
 	private JProgressBar progressBar;
 	private JButton btnViewFitnesses;
 	private JButton btnViewPopulatuon;
-	private JButton btnTest;
 	private JButton btnSave;
 	private JButton btnLoad;
 	final JFileChooser fc = new JFileChooser();
@@ -88,7 +87,7 @@ public class MainWindow extends JFrame implements ActionListener, PropertyChange
 		fc.setCurrentDirectory(workingDirectory);
 		setDefaultLookAndFeelDecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 283, 313);
+		setBounds(100, 100, 283, 282);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -245,7 +244,7 @@ public class MainWindow extends JFrame implements ActionListener, PropertyChange
 		btnViewFitnesses.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				FitnessWindow fw = new FitnessWindow();
-				ea.ViewFitnesses(fw.getTextArea(), fw.getTextArea_1(), fw.getBestFitArray(), fw.getBestFitFunc());
+				ea.ViewFitnesses(fw.getTextArea(), fw.getBestFitArray());
 				fw.setVisible(true);
 			}
 		});
@@ -253,16 +252,6 @@ public class MainWindow extends JFrame implements ActionListener, PropertyChange
 				progressBar = new JProgressBar();
 				progressBar.setBounds(10, 224, 233, 14);
 				contentPane.add(progressBar);
-				
-				btnTest = new JButton("Test");
-				btnTest.setEnabled(false);
-				btnTest.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						ea.test();
-					}
-				});
-				btnTest.setBounds(83, 249, 89, 23);
-				contentPane.add(btnTest);
 	}
 
 	@Override

@@ -266,26 +266,16 @@ public class MyGA extends SwingWorker<Integer, String> {
 		return output;
 	}
 
-	public void ViewFitnesses(JTextArea view1, JTextArea view2, JLabel arraybest, JLabel funcbest){
+	public void ViewFitnesses(JTextArea view1, JLabel arraybest){
 		int best =fitness[0];
-		int best2 = JSSP.getFitness(population[0], problem);
-		int fit=0;
 
 		for(int i=0;i<populationSize;i++){
 			view1.append(i+": "+fitness[i]+"\n");
 			if(best > fitness[i]){
 				best = fitness[i];
-			}
-
-			fit = JSSP.getFitness(population[i], problem);
-			view2.append(i+": "+fit+"\n");
-			if(best2 > fit){
-				best2 = fit;
-			}			
+			}		
 		}
 		arraybest.setText(Integer.toString(best));
-		funcbest.setText(Integer.toString(best2));
-
 	}
 
 	public void ViewPopulations(JTextArea view1, JTextArea view2){
