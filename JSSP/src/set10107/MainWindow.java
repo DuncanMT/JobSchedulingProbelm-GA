@@ -51,7 +51,7 @@ public class MainWindow extends JFrame implements ActionListener, PropertyChange
 
 	private JButton btnRun;
 	private JButton btnCancel;
-	private MyEA ea;
+	private MyGA ea;
 	private JProgressBar progressBar;
 	private JButton btnViewFitnesses;
 	private JButton btnViewPopulatuon;
@@ -287,7 +287,7 @@ public class MainWindow extends JFrame implements ActionListener, PropertyChange
 		int itterations = (int) spinnerItterations.getValue();
 
 
-		ea = new MyEA(problemId, mutationRate, tournamentSize, populationSize, lblShowResult, itterations, crossoverType, btnRun);
+		ea = new MyGA(problemId, mutationRate, tournamentSize, populationSize, lblShowResult, itterations, crossoverType, btnRun);
 
 		ea.addPropertyChangeListener(this);
 		ea.execute();

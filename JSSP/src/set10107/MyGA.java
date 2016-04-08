@@ -12,7 +12,7 @@ import modelP.JSSP;
 import modelP.Problem;
 
 
-public class MyEA extends SwingWorker<Integer, String> {
+public class MyGA extends SwingWorker<Integer, String> {
 
 	private Random rand = new Random();
 	private int populationSize;
@@ -29,7 +29,7 @@ public class MyEA extends SwingWorker<Integer, String> {
 	private String crossoverType;
 	private JButton button;
 
-	public MyEA(int problemNum, double mutationRate, int tournamentSize, int populationSize, JLabel resultsLabel, int itterations, String crossoverType, JButton button) {
+	public MyGA(int problemNum, double mutationRate, int tournamentSize, int populationSize, JLabel resultsLabel, int itterations, String crossoverType, JButton button) {
 		this.mutationRate = mutationRate;
 		this.tournamentSize= tournamentSize;
 		this.populationSize= populationSize;
